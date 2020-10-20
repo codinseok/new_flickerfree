@@ -1,9 +1,8 @@
 # new_flickerfree
 You can easily remove flickering in your video.
-just upload and get result
-
-I made the web show my sample video if there is nothing to upload
-
+just upload and get result.
+I made the web show my sample video if there is nothing to upload.
+it is based on google chrome.
 http://codinseok.pythonanywhere.com/
 
 Screenshots
