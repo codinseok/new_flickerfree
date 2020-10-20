@@ -10,7 +10,12 @@ def removeView(request):
 def upload(request):
     context = {}
     if request.method == 'POST':
-        uploaded_file = request.FILES['videoname']
+        uploaded_file = request.FILES.get('videoname',False)
+        if not uploaded_file:
+            context['url'] = '/media/slomo.MOV'
+            context['modurl'] = context['url'] + '.mp4'
+            return render(request, 'index.html', context)
+
         fs = FileSystemStorage()
         name = fs.save(uploaded_file.name, uploaded_file)
         context['url'] = fs.url(name)
