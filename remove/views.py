@@ -27,7 +27,7 @@ def upload(request):
         width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
         height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
         print("재생할 파일 넓이, 높이 : %d, %d" % (width, height))
-        fourcc = cv2.VideoWriter_fourcc(*'H264')
+        fourcc = cv2.VideoWriter_fourcc(*'avc1')
         #fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         #fourcc = 0x31637661
         out = cv2.VideoWriter(modfile, fourcc, 30.0, (int(height), int(width)))
